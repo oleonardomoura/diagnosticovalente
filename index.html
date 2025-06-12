@@ -26,6 +26,10 @@
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+    <!-- Variável global para controlar se o formulário foi submetido -->
+    <script>
+        var submitted = false;
+    </script>
     <div class="form-container bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 w-full">
         <header class="text-center mb-8">
             <!-- Título com a cor principal do site Valente -->
@@ -43,8 +47,8 @@
             action="https://docs.google.com/forms/d/e/1FAIpQLScWS36y5MpFr2m_A-Fnc0a6jpkKVRtMzjyhlYakysbPGl6NWQ/formResponse"
             method="POST"
             class="space-y-8"
-            target="_self"
-            onsubmit="setTimeout(function(){ window.location.reload(); }, 100);"
+            target="hidden_iframe"  /* Submete para o iframe oculto */
+            onsubmit="submitted=true;" /* Marca que o formulário foi submetido */
         >
             <!-- Adiciona um campo hidden necessário para o Google Forms -->
             <input type="hidden" name="usp" value="pp_url">
@@ -246,6 +250,9 @@
                 </button>
             </div>
         </form>
+
+        <!-- Iframe oculto para submeter ao Google Forms em segundo plano -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { window.location.href = 'agradecimento.html'; }"></iframe>
     </div>
 </body>
 </html>

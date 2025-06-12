@@ -129,7 +129,7 @@
                             </label>
                             <label class="inline-flex items-center">
                                 <input type="checkbox" class="form-checkbox h-4 w-4 text-[#2EAFB2] rounded" name="entry.1505315809" value="Lideranças Intermediárias (Coordenadores, Supervisores)">
-                                <span class="ml-2 text-gray-700">Lideranças Intermediárias (Coordenadores, Supervisores)</span>
+                                <span class="ml-2 text-gray-700">Lideranças Intermediárias (Coordinadores, Supervisores)</span>
                             </label>
                             <label class="inline-flex items-center">
                                 <input type="checkbox" class="form-checkbox h-4 w-4 text-[#2EAFB2] rounded" name="entry.1505315809" value="Equipes Operacionais/Técnicas">
@@ -312,7 +312,7 @@
                             'Authorization': `Bearer ${API_KEY}`
                         },
                         body: JSON.stringify({
-                            from: 'Valente Diagnóstico <onboarding@resend.dev>', // Usando o remetente padrão do Resend
+                            from: 'onboarding@resend.dev', // REMETENTE PADRÃO VERIFICADO DO RESEND
                             to: ['leo.moura@institutovalente.com.br'], // E-mail para receber as informações
                             subject: `Novo Diagnóstico Valente - ${formObject['68067341'] || 'Empresa Sem Nome'}`, // Assunto do e-mail com o nome da empresa
                             text: emailBodyText, // Versão em texto puro do e-mail
@@ -346,4 +346,3 @@
     </div>
 </body>
 </html>
-

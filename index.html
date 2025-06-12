@@ -26,7 +26,8 @@
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-    <!-- Variável global para controlar se o formulário foi submetido -->
+    <!-- A variável 'submitted' não é mais estritamente necessária com esta abordagem de redirecionamento,
+         mas é mantida por segurança caso outras lógicas futuras dependam dela. -->
     <script>
         var submitted = false;
     </script>
@@ -252,7 +253,8 @@
         </form>
 
         <!-- Iframe oculto para submeter ao Google Forms em segundo plano -->
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { window.location.href = 'agradecimento.html'; }"></iframe>
+        <!-- O evento 'onload' do iframe foi removido para evitar conflitos no redirecionamento. -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
 </body>
 </html>

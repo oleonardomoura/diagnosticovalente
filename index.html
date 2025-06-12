@@ -189,7 +189,7 @@
                             </label>
                             <label class="inline-flex items-center">
                                 <input type="checkbox" class="form-checkbox h-4 w-4 text-[#2EAFB2] rounded" name="entry.1740924976" value="Mentoria individual ou em grupo">
-                                <span class="ml-2 text-gray-700">Mentoria individual ou em grupo</span>
+                                <span class="ml-2 text-gray-700">Mentoria individual ou em grupo)</span>
                             </label>
                             <label class="inline-flex items-center">
                                 <input type="checkbox" class="form-checkbox h-4 w-4 text-[#2EAFB2] rounded" name="entry.1740924976" value="Workshops práticos">
@@ -312,8 +312,8 @@
                             'Authorization': `Bearer ${API_KEY}`
                         },
                         body: JSON.stringify({
-                            from: 'Valente Diagnóstico <onboarding@resend.dev>', // Substitua por seu e-mail/domínio verificado no Resend
-                            to: ['oi@institutovalente.com.br'],
+                            from: 'Valente Diagnóstico <onboarding@resend.dev>', // Usando o remetente padrão do Resend
+                            to: ['leo.moura@institutovalente.com.br'], // E-mail para receber as informações
                             subject: `Novo Diagnóstico Valente - ${formObject['68067341'] || 'Empresa Sem Nome'}`, // Assunto do e-mail com o nome da empresa
                             text: emailBodyText, // Versão em texto puro do e-mail
                             html: emailBodyHtml // Versão em HTML do e-mail

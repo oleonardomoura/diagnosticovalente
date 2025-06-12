@@ -48,7 +48,7 @@
             method="POST"
             class="space-y-8"
             target="hidden_iframe"  /* Submete para o iframe oculto */
-            onsubmit="submitted=true;" /* Marca que o formulário foi submetido */
+            onsubmit="submitted=true; setTimeout(function(){ window.location.href = 'agradecimento.html'; }, 500);" /* Marca que o formulário foi submetido e redireciona após um pequeno atraso */
         >
             <!-- Adiciona um campo hidden necessário para o Google Forms -->
             <input type="hidden" name="usp" value="pp_url">
